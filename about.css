@@ -1,0 +1,112 @@
+.about-intro {
+    align-items: start
+}
+
+.about-intro>div:first-child {
+    max-width: 560px
+}
+
+.about-note {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    position: relative
+}
+
+.about-note>span {
+    font-size: .7rem;
+    letter-spacing: .2em;
+    color: var(--red)
+}
+
+.about-note h2 {
+    font-size: 2.4rem;
+    margin: 2rem 0 1rem
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem 3rem;
+    margin-top: 2rem
+}
+
+.skill>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: .55rem
+}
+
+.skill b {
+    color: var(--w);
+    font-size: .9rem
+}
+
+.skill span {
+    font-size: .75rem;
+    color: var(--muted)
+}
+
+.skill-track {
+    height: 7px;
+    background: #8884;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.skill-track i {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--red);
+    border-radius: 10px;
+    transition: width 1.2s ease
+}
+
+.skill.in .skill-track i {
+    width: var(--w)
+}
+
+.tl {
+    list-style: none;
+    border-left: 2px solid var(--red);
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    max-width: 760px
+}
+
+.tl li {
+    margin-bottom: 1.7rem;
+    position: relative
+}
+
+.tl li:before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: var(--red);
+    border-radius: 50%;
+    left: -1.84rem;
+    top: .55rem
+}
+
+.tl b {
+    display: block;
+    color: var(--w);
+    margin-bottom: .3rem
+}
+
+.tl span {
+    font-size: .9rem
+}
+
+@media(max-width:650px) {
+    .skill-grid {
+        grid-template-columns: 1fr
+    }
+    .about-note {
+        padding: 1.4rem
+    }
+}

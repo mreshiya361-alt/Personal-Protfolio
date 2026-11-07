@@ -1,0 +1,198 @@
+.project-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 1.5rem
+}
+
+.filters {
+    display: flex;
+    gap: .55rem;
+    flex-wrap: wrap
+}
+
+.filters button {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    padding: .48rem 1rem;
+    border-radius: 99px;
+    cursor: pointer;
+    font: inherit;
+    font-size: .82rem;
+    transition: .2s
+}
+
+.filters button:hover,
+.filters .on {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff
+}
+
+#projectSearch {
+    max-width: 260px;
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    color: var(--w);
+    padding: .7rem 1rem;
+    border-radius: 99px;
+    font: inherit;
+    font-size: .85rem
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.2rem
+}
+
+.card {
+    background: var(--card);
+    padding: 1rem;
+    border: 1px solid var(--line);
+    cursor: pointer;
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+    transform-style: preserve-3d;
+    will-change: transform
+}
+
+.card:hover {
+    border-color: var(--red);
+    box-shadow: 0 14px 30px #0003
+}
+
+.card.hide {
+    display: none
+}
+
+.th {
+    display: block;
+    width: 100%;
+    aspect-ratio: 400/260;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #444, var(--red));
+    transition: filter .35s
+}
+
+.card:hover .th {
+    filter: brightness(1.12)
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    margin: .2rem 0 .5rem
+}
+
+.card h3 {
+    font-size: 1.55rem;
+    margin-bottom: .5rem
+}
+
+.card p {
+    font-size: .84rem;
+    min-height: 3rem
+}
+
+.view-project {
+    border: 0;
+    border-bottom: 1px solid var(--red);
+    background: none;
+    color: var(--w);
+    padding: .35rem 0;
+    margin-top: .8rem;
+    cursor: pointer;
+    font: inherit;
+    font-size: .8rem
+}
+
+.no-results {
+    padding: 2rem;
+    text-align: center
+}
+
+#modal {
+    position: fixed;
+    inset: 0;
+    background: #000b;
+    display: none;
+    place-items: center;
+    z-index: 30;
+    padding: 1rem
+}
+
+#modal.open {
+    display: grid
+}
+
+.modal-panel {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    max-width: 520px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: auto;
+    animation: pop .3s
+}
+
+#x {
+    position: absolute;
+    right: 1rem;
+    top: .7rem;
+    background: none;
+    border: 0;
+    color: var(--w);
+    font-size: 2rem;
+    cursor: pointer
+}
+
+#mi {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1.6;
+    object-fit: cover;
+    margin-bottom: 1.5rem
+}
+
+.modal-panel h2 {
+    font-size: 2rem;
+    margin: .5rem 0
+}
+
+.modal-panel p {
+    margin: .8rem 0
+}
+
+.tech-line {
+    font-size: .85rem
+}
+
+@keyframes pop {
+    from {
+        transform: translateY(12px) scale(.98);
+        opacity: 0
+    }
+    to {
+        transform: none;
+        opacity: 1
+    }
+}
+
+@media(max-width:650px) {
+    .project-tools {
+        align-items: stretch;
+        flex-direction: column
+    }
+    #projectSearch {
+        max-width: none
+    }
+    .modal-panel {
+        padding: 1.2rem
+    }
+}

@@ -1,0 +1,280 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    min-height: 82vh;
+    padding: 3rem 6vw
+}
+
+.tag {
+    color: var(--red);
+    font-size: .75rem;
+    letter-spacing: .2em;
+    margin-bottom: 1rem
+}
+
+.hero h1 em {
+    color: var(--red);
+    font-style: normal
+}
+
+.hero p {
+    margin: 1.25rem 0;
+    max-width: 49ch
+}
+
+.hero .rv:nth-child(2) {
+    transition-delay: .12s
+}
+
+.hero .rv:nth-child(3) {
+    transition-delay: .24s
+}
+
+.hero .rv:nth-child(4) {
+    transition-delay: .36s
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    flex-wrap: wrap;
+    margin-top: 1.6rem
+}
+
+.social-inline {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    font-size: .78rem;
+    color: var(--muted)
+}
+
+.social-inline a {
+    text-decoration: none;
+    color: var(--ink)
+}
+
+.social-inline a:hover {
+    color: var(--red)
+}
+
+.caret {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--red);
+    vertical-align: -2px;
+    animation: b 1s steps(1) infinite
+}
+
+@keyframes b {
+    50% {
+        opacity: 0
+    }
+}
+
+.art {
+    position: relative;
+    height: clamp(330px, 42vw, 490px);
+    overflow: hidden;
+    background: #111;
+    isolation: isolate;
+    border: 1px solid #ffffff12;
+    box-shadow: 0 24px 70px #0005
+}
+
+.hero-workspace {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 0;
+    transition: transform .7s ease
+}
+
+.art:hover .hero-workspace {
+    transform: scale(1.025)
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    padding: 2.6rem 6vw;
+    border-block: 1px solid var(--line)
+}
+
+.stats b {
+    display: block;
+    font: 500 3rem "Cormorant Garamond", Georgia, serif;
+    color: var(--w)
+}
+
+.stats span {
+    font-size: .78rem;
+    color: var(--muted)
+}
+
+.marq {
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    padding: 1rem 0;
+    white-space: nowrap
+}
+
+.marq div {
+    display: inline-block;
+    animation: mq 30s linear infinite
+}
+
+.marq span {
+    font: 500 1.6rem "Cormorant Garamond", Georgia, serif;
+    color: var(--w);
+    margin: 0 2rem
+}
+
+.marq span:nth-child(even) {
+    color: var(--red)
+}
+
+.marq:hover div {
+    animation-play-state: paused
+}
+
+@keyframes mq {
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem
+}
+
+.service {
+    position: relative;
+    min-height: 240px;
+    padding: 1.6rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: transform .3s, border-color .3s;
+    overflow: hidden
+}
+
+.service:hover {
+    transform: translateY(-7px);
+    border-color: var(--red)
+}
+
+.service-no,
+.card-meta {
+    font-size: .7rem;
+    letter-spacing: .15em;
+    color: var(--red)
+}
+
+.service h3 {
+    font-size: 1.65rem;
+    margin: 2.5rem 0 .7rem
+}
+
+.service p {
+    font-size: .88rem;
+    max-width: 34ch
+}
+
+.service-icon {
+    position: absolute;
+    right: 1.3rem;
+    top: 1rem;
+    color: #e1060055;
+    font-size: 2rem
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem
+}
+
+.featured {
+    display: block;
+    text-decoration: none;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: transform .3s, border-color .3s
+}
+
+.featured:hover {
+    transform: translateY(-6px);
+    border-color: var(--red)
+}
+
+.featured img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1.55;
+    object-fit: cover;
+    background: #444
+}
+
+.featured div {
+    padding: 1.2rem
+}
+
+.featured span {
+    font-size: .68rem;
+    letter-spacing: .15em;
+    color: var(--red)
+}
+
+.featured h3 {
+    font-size: 1.55rem;
+    margin: .5rem 0
+}
+
+.featured p {
+    font-size: .78rem;
+    color: var(--muted)
+}
+
+@media(max-width:900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 4rem
+    }
+    .art {
+        max-width: 620px;
+        width: 100%;
+        margin: auto
+    }
+    .service-grid,
+    .featured-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:600px) {
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem
+    }
+    .service-grid,
+    .featured-grid {
+        grid-template-columns: 1fr
+    }
+    .hero {
+        padding-top: 3rem
+    }
+    .art {
+        height: 330px
+    }
+}

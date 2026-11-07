@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Selected web development and JavaScript practice projects by Mayank Reshiya.">
+    <title>Work | Mayank Reshiya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+
+<body>
+    <div id="preloader" aria-hidden="true">
+        <div>
+            <div class="loader-mark">Mayank Reshiya<span>.</span></div>
+            <div class="loader-line"><i></i></div>
+        </div>
+    </div>
+    <div class="bar"></div>
+    <header><a class="logo" href="index.html">Mayank Reshiya<span class="logo-dot">.</span></a>
+        <nav id="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html" class="on">Work</a><a href="contact.html">Contact</a></nav><button id="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </header>
+    <main>
+        <section class="wrap page-hero">
+            <p class="tag rv">MY PROJECTS</p>
+            <h1 class="rv">Selected <em>work.</em></h1>
+            <p class="intro rv">A collection of practice projects and concepts created while exploring web development. Select a project to see more details.</p>
+            <div class="project-tools rv">
+                <div class="filters"><button class="on" data-f="all">All</button><button data-f="web">Websites</button><button data-f="app">Web apps</button></div><input id="projectSearch" type="search" placeholder="Search projects..." aria-label="Search projects">
+            </div>
+            <div class="grid" id="projectGrid">
+                <article class="card rv" data-c="web" data-t="Business landing page" data-d="HTML5, CSS3, JavaScript" data-s="A responsive landing page concept with a clear hero area, service highlights and animated sections." tabindex="0"><img class="th" src="images/p1.svg" alt="Business landing page preview">
+                    <div class="card-meta"><span>WEBSITE</span><span>01</span></div>
+                    <h3>Business landing page</h3>
+                    <p>Responsive layout with a focused call to action.</p><button class="view-project" type="button">View details ↗</button>
+                </article>
+                <article class="card rv" data-c="app" data-t="To-do app" data-d="HTML, CSS, JavaScript, Local Storage" data-s="A task manager concept for adding, completing and deleting tasks. Browser local storage can keep the task list between visits." tabindex="0"><img class="th" src="images/p2.svg" alt="To-do app preview">
+                    <div class="card-meta"><span>WEB APP</span><span>02</span></div>
+                    <h3>To-do app</h3>
+                    <p>Simple task management and saved tasks.</p><button class="view-project" type="button">View
+                        details ↗</button>
+                </article>
+                <article class="card rv" data-c="app" data-t="Weather dashboard" data-d="HTML, CSS, JavaScript, API concept" data-s="A weather dashboard interface concept with a city search flow. Connect a weather API key to enable live forecast data." tabindex="0"><img class="th" src="images/p3.svg" alt="Weather dashboard preview">
+                    <div class="card-meta"><span>WEB APP</span><span>03</span></div>
+                    <h3>Weather dashboard</h3>
+                    <p>Weather search interface concept.</p><button class="view-project" type="button">View details
+                        ↗</button>
+                </article>
+                <article class="card rv" data-c="web" data-t="Restaurant website" data-d="HTML, CSS" data-s="A restaurant website concept with menu, gallery and a table enquiry form layout." tabindex="0"><img class="th" src="images/p4.svg" alt="Restaurant website preview">
+                    <div class="card-meta"><span>WEBSITE</span><span>04</span></div>
+                    <h3>Restaurant website</h3>
+                    <p>Menu, gallery and booking enquiry concept.</p><button class="view-project" type="button">View
+                        details ↗</button>
+                </article>
+                <article class="card rv" data-c="web" data-t="Personal blog" data-d="HTML, CSS, JavaScript" data-s="A clean reading layout concept with a simple content structure and a theme toggle." tabindex="0"><img class="th" src="images/p5.svg" alt="Personal blog preview">
+                    <div class="card-meta"><span>WEBSITE</span><span>05</span></div>
+                    <h3>Personal blog</h3>
+                    <p>Simple reading experience and theme concept.</p><button class="view-project" type="button">View
+                        details ↗</button>
+                </article>
+                <article class="card rv" data-c="app" data-t="Calculator" data-d="HTML, CSS, JavaScript" data-s="A JavaScript calculator concept with keyboard-friendly input and a clear display." tabindex="0"><img class="th" src="images/p6.svg" alt="Calculator preview">
+                    <div class="card-meta"><span>WEB APP</span><span>06</span></div>
+                    <h3>Calculator</h3>
+                    <p>Everyday calculations with keyboard support.</p><button class="view-project" type="button">View
+                        details ↗</button>
+                </article>
+            </div>
+            <p id="noResults" class="no-results" hidden>No projects match your search.</p>
+            <p class="small-note">These are portfolio sample/concept entries. Replace them with your finished projects, real screenshots, GitHub repositories and live demo links before sharing with clients.</p>
+        </section>
+        <div id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+            <div class="modal-panel"><button id="x" aria-label="Close dialog">×</button><img id="mi" alt=""><span class="tag">PROJECT DETAILS</span>
+                <h2 id="mt"></h2>
+                <p id="ms"></p>
+                <p class="tech-line"><b>Built with:</b> <span id="md"></span></p>
+                <div class="project-actions"><a class="btn ghost" id="projectGithub" href="#" target="_blank" rel="noopener" hidden>GitHub source ↗</a><a class="btn" id="projectLive" href="#" target="_blank" rel="noopener" hidden>Live demo ↗</a></div>
+                <p class="small-note">Add real repository and live-demo URLs for each project in js/main.js.</p><a class="btn" href="contact.html">Discuss a similar project ↗</a>
+            </div>
+        </div>
+    </main>
+    <button id="top" aria-label="Back to top">↑</button>
+    <div id="cur"></div>
+    <footer><span>© <span id="yr"></span> Mayank Reshiya</span><span>Designed with care · Built with HTML, CSS &
+            JavaScript</span><a href="#top">Back to top ↑</a></footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

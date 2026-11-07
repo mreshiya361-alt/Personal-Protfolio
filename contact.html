@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Contact Mayank Reshiya about website projects and collaborations.">
+    <title>Contact | Mayank Reshiya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <div id="preloader" aria-hidden="true">
+        <div>
+            <div class="loader-mark">Mayank Reshiya<span>.</span></div>
+            <div class="loader-line"><i></i></div>
+        </div>
+    </div>
+    <div class="bar"></div>
+    <header><a class="logo" href="index.html">Mayank Reshiya<span class="logo-dot">.</span></a>
+        <nav id="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Work</a><a href="contact.html" class="on">Contact</a></nav><button id="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </header>
+    <main>
+        <section class="wrap page-hero">
+            <p class="tag rv">GET IN TOUCH</p>
+            <h1 class="rv">Let's make something <em>happen.</em></h1>
+            <div class="two contact-layout">
+                <div class="rv">
+                    <p class="contact-lead">Have a website idea, a project to discuss or just want to connect? Send me a message.
+                    </p>
+                    <div class="contact-detail"><span>EMAIL</span><b id="emailText">your-email@example.com</b></div>
+                    <div class="contact-detail"><span>WHATSAPP</span><b>Quick chat available after number setup</b>
+                    </div>
+                    <div class="contact-detail"><span>LOCATION</span><b>Rajkot, Gujarat, India</b></div>
+                    <div class="contact-detail"><span>SOCIAL</span>
+                        <div class="social-links"><a href="https://github.com/" target="_blank" rel="noopener">GitHub
+                                ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                        </div>
+                    </div>
+                    <p class="small-note">Update the email and social profile links in <code>js/main.js</code> before publishing.
+                    </p>
+                </div>
+                <form id="f" class="contact-form rv" novalidate><label for="name">Your name</label><input id="name" name="n" autocomplete="name" placeholder="Enter your name" required>
+                    <label for="email">Your email</label><input id="email" name="e" type="email" autocomplete="email" placeholder="you@example.com" required>
+                    <label for="message">Your message</label><textarea id="message" name="m" rows="5" placeholder="Tell me about your idea..." required></textarea>
+                    <button class="btn" type="submit">Send message ↗</button><a class="btn ghost" id="whatsappContact" href="#" hidden>Chat on WhatsApp ↗</a>
+                    <p id="msg" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+        <section class="closing-cta rv">
+            <p class="tag">THANKS FOR STOPPING BY</p>
+            <h2>Talk soon <em>✳</em></h2>
+        </section>
+    </main>
+    <button id="top" aria-label="Back to top">↑</button>
+    <div id="cur"></div>
+    <footer><span>© <span id="yr"></span> Mayank Reshiya</span><span>Designed with care · Built with HTML, CSS &
+            JavaScript</span><a href="#top">Back to top ↑</a></footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+MAYANK RESHIYA
+Aspiring Web Developer
+Rajkot, Gujarat, India
+
+PROFILE
+Aspiring web developer interested in building clean, responsive and user-friendly websites. Enjoys learning through practical projects and improving frontend and backend development skills.
+
+SKILLS
+- HTML5, CSS3 and JavaScript
+- Responsive web design
+- PHP and MySQL (learning / practice)
+- Python and Flask (learning / practice)
+- Git and GitHub
+
+PROJECTS
+Add your completed projects here with a short description and links to the live demo and source code.
+
+EDUCATION
+RK University
+Add your exact degree, course, semester and expected graduation year.
+
+CONTACT
+Email: Replace with your real email address
+GitHub: Add your profile URL
+LinkedIn: Add your profile URL
+
+NOTE
+Edit this resume with accurate education, skills, project links and contact details before sharing it with employers or clients.
